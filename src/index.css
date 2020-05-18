@@ -7,10 +7,6 @@ body {
     margin: 0 auto;
 }
 
-a {
-	margin-right: 1rem;
-}
-
 button {
 	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
@@ -25,6 +21,18 @@ input {
 	min-width: 250px;
 	padding: 0.5rem 0.75rem;
 	width: 100%;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.nav-button, a {
+  margin: 1.25rem;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .home-header {
@@ -55,4 +63,14 @@ input {
 
 .home-header-text {
   padding-top: 20%;
+}
+
+@media (max-width: 600px) {
+  .app-header, .nav-button {
+    display: block;
+    text-align: center;
+  }
+  .app-header a {
+    font-size: .6em;
+  }
 }
