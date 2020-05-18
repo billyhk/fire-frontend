@@ -3,6 +3,10 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 //COMPONENTS
 import Home from './components/Home';
+import Create from './components/Create';
+import Edit from './components/Edit';
+import StrainInformation from './components/StrainInformation.js';
+import StrainsList from './components/StrainsList';
 
 const App = () => {
 	return (
@@ -18,10 +22,10 @@ const App = () => {
 			<main>
 				<Switch>
 					<Route exact path='/' component={Home} />
-					{/* <Route exact path='/strains/create' component={Create} />
+					<Route exact path='/strains/create' component={Create} />
+					<Route exact path='/strains/:id/edit' component={Edit} />
+					<Route exact path='/strains/:id' component={StrainInformation} />
 					<Route exact path='/strains' component={StrainsList} />
-					<Route exact path='/strains/:id' component={Show} />
-					<Route exact path='/strains/:id/edit' component={Edit} /> */}
 				</Switch>
 			</main>
 		</>
