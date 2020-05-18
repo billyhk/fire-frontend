@@ -31,7 +31,7 @@ const StrainInformation = ({ match }) => {
 		return <Redirect to='/strains' />;
 	}
 	if (error) {
-		return <div>Sorry, there was a problem getting strains</div>;
+		return <div>Sorry, there was a problem getting this strain.</div>;
 	}
 	if (!strain) {
 		return <div>Loading...</div>;
@@ -46,7 +46,7 @@ const StrainInformation = ({ match }) => {
 				<li>{strain.thcContent}</li>
 				<li>{strain.cbdContent}</li>
 				<li>{strain.smellAndFlavor}</li>
-				<li>{strain.effects}</li>
+				<li>{strain.effect}</li>
 			</ul>
 			<button onClick={onDeletedStrain}>Delete Strain</button>
 			<Link to={`/strains/${match.params.id}/edit`}>Update Strain</Link>

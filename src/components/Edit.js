@@ -20,7 +20,7 @@ const StrainEdit = ({ match }) => {
 					thcContent: data.thcContent,
 					cbdContent: data.cbdContent,
 					smellAndFlavor: data.smellAndFlavor,
-					effects: data.effects,
+					effect: data.effect,
 				}).catch(() => {
 					setError(true);
 				});

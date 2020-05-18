@@ -11,7 +11,7 @@ const StrainCreate = () => {
 		thcContent: '',
 		cbdContent: '',
 		smellAndFlavor: '',
-		effects: '',
+		effect: '',
 	};
 	const [strain, setStrain] = useState(initialStrainState);
 	const [createdId, setCreatedId] = useState(null);
