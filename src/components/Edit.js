@@ -4,7 +4,7 @@ import { APIURL } from '../config';
 import StrainForm from './StrainForm.js';
 
 const StrainEdit = ({ match }) => {
-	const [strain, setStrain] = useState(null);
+	const [strain, setStrain] = useState('');
 	const [createdId, setCreatedId] = useState(null);
 	const [error, setError] = useState(false);
 
@@ -21,9 +21,10 @@ const StrainEdit = ({ match }) => {
 					cbdContent: data.cbdContent,
 					smellAndFlavor: data.smellAndFlavor,
 					effect: data.effect,
-				}).catch(() => {
-					setError(true);
 				});
+			})
+			.catch(() => {
+				setError(true);
 			});
 		// eslint-disable-next-line
 	}, []);
@@ -62,13 +63,12 @@ const StrainEdit = ({ match }) => {
 	return (
 		<>
 			<h2>We greatly appreciate all of our contributors!</h2>
-			<h3>please fill out the form below to lend some love to our database</h3>
-			<h4>edit our entry on {strain.name}...</h4>
+			<h4>Please fill out the form below to edit data for {strain.name}.</h4>
 			{error && <p>Something went wrong... Please try again!</p>}
 			<StrainForm
 				strain={strain}
 				handleChange={handleChange}
-				handleSubmit={handleSubmit}
+				handleSubmit={handleSubmit} 
 			/>
 		</>
 	);

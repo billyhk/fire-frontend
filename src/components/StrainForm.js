@@ -62,14 +62,14 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => (
 			id='smellAndFlavor'
 		/>
 
-		<label htmlFor='effects'>Effects</label>
+		<label htmlFor='effect'>Effect</label>
 		<input
-			placeholder='Effects'
-			value={strain.effects}
-			name='effects'
+			placeholder='Effect'
+			value={strain.effect}
+			name='effect'
 			onChange={handleChange}
 			required
-			id='effects'
+			id='effect'
 		/>
 
 		<button type='submit'>Submit</button>

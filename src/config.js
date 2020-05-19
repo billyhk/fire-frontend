@@ -1,2 +1,1 @@
-export const APIURL =
-	window.location.hostname === 'REPLACE WITH DEPLOYED API URL';
+export const APIURL = 'http://localhost:4000';
