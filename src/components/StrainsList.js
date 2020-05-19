@@ -10,7 +10,6 @@ const StrainsList = (props) => {
 		fetch(`${APIURL}/strains`)
 			.then((res) => res.json())
 			.then((data) => {
-                console.log(data);
                 setStrains(data);
 			})
 			.catch(() => {

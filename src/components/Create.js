@@ -21,7 +21,7 @@ const StrainCreate = () => {
 		e.persist();
 		setStrain({
 			...strain,
-			[e.target.name]: e.target.value,
+			[e.target.name]: e.target.value
 		});
 	};
 
@@ -34,10 +34,11 @@ const StrainCreate = () => {
 			headers: {
 				'Content-type': 'application/json; charset=utf-8',
 			},
-			BODY: JSON.stringify(strain),
+			body: JSON.stringify(strain),
 		})
 			.then((res) => res.json())
 			.then((data) => {
+				console.log(data);
 				setCreatedId(data._id);
 			})
 			.catch(() => {
