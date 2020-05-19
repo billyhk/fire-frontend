@@ -39,17 +39,37 @@ const StrainInformation = ({ match }) => {
 
 	return (
 		<div>
-			<h2>{strain.name}</h2>
-			<ul>
-				<li>{strain.genetics}</li>
-				<li>{strain.parents}</li>
-				<li>{strain.thcContent}</li>
-				<li>{strain.cbdContent}</li>
-				<li>{strain.smellAndFlavor}</li>
-				<li>{strain.effect}</li>
-			</ul>
+			<h2 className='details-strain-name'>{strain.name}</h2>
+			<div className='details-container'>
+				<img
+					src='https://leafly-production.imgix.net/https%3A%2F%2Fleafly-public.s3-us-west-2.amazonaws.com%2Fproducts%2Fphotos%2FKhfvHOfbSZGyD2uYs0F7_blue-dream-seeds_large.png?ixlib=rails-4.0.0&w=490&h=490&fit=crop&bg=FFFFFF&fm=jpg&q=80&s=108bc0d379afc4988806a6073e26c3fb'
+					className='details-image'
+					alt=''
+				/>
+				<ul className='details-text'>
+					<li className='details-property'>Genetics :</li>
+					<li className='details-value'>{strain.genetics}</li>
+
+					<li className='details-property'>Parents :</li>
+					<li className='details-value'>{strain.parents}</li>
+
+					<li className='details-property'>THC Content :</li>
+					<li className='details-value'>{strain.thcContent}</li>
+
+					<li className='details-property'>CBD Content : </li>
+					<li className='details-value'>{strain.cbdContent}</li>
+
+					<li className='details-property'>Small And Flavour :</li>
+					<li className='details-value'>{strain.smellAndFlavor}</li>
+
+					<li className='details-property'>Effect :</li>
+					<li className='details-value'>{strain.effect}</li>
+				</ul>
+			</div>
+			<Link to={`/strains/${match.params.id}/edit`}>
+				<button>Update Strain</button>
+			</Link>
 			<button onClick={onDeletedStrain}>Delete Strain</button>
-			<Link to={`/strains/${match.params.id}/edit`}>Update Strain</Link>
 		</div>
 	);
 };

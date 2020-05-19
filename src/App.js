@@ -14,9 +14,22 @@ const App = () => {
 			<header className='app-header'>
 				<h1>f i r e</h1>
 				<div className='nav-button'>
-					<Link to='/'>home</Link>
-					<Link to='/create'>add strain</Link>
-					<Link to='/strains'>all strains</Link>
+					<Link to='/'>
+						<h1>home</h1>
+					</Link>
+					<h1>
+						{'\u00b7'}
+					</h1>
+					<Link to='/create'>
+						<h1>add strain</h1>
+					</Link>
+					<h1>
+						{'\u00b7'}
+					</h1>
+
+					<Link to='/strains'>
+						<h1>all strains</h1>
+					</Link>
 				</div>
 			</header>
 			<main>

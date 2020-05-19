@@ -5,6 +5,7 @@ body {
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 		sans-serif;
 	margin: 0 auto;
+	text-align: center;
 }
 
 button {
@@ -28,20 +29,26 @@ input {
 	justify-content: space-between;
 	margin: 0 auto;
 	background: rgb(88, 176, 88);
+	min-height: 10vmin;
 }
 
-.nav-button,
+.nav-button > a,
+.nav-button > h1,
 a {
-	margin: 1.25rem;
-	font-size: 2rem;
+	margin: 0 1.25rem 0 1.25rem;
 	text-decoration: none;
 	color: rgb(150, 70, 150);
+	display: inline-block;
+}
+
+.strains-gallery-container a {
+	font-size: 2em;
 }
 
 a:hover {
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
-	color: rgba(140, 81, 81, 0.719);
+	color: rgba(201, 124, 124, 0.719);
 	text-decoration: none;
 }
 
@@ -54,7 +61,8 @@ a:hover {
 	background-image: url(https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2017/06/26113312/white-widow.jpg);
 	background-position: 50% 25%;
 	background-size: 100%;
-	min-height: 35vh;
+	min-height: 25vh;
+	width: 100%;
 	background-repeat: no-repeat;
 	color: white;
 }
@@ -62,9 +70,14 @@ a:hover {
 .home-header-logo {
 	padding-left: 1%;
 	font-size: 2em;
+	color: rgb(130, 255, 116);
+	font-family: arial;
+	font-weight: 250;
 }
 .home-header-text > h1 {
 	padding-left: 7%;
+	font-family: sans-serif;
+	font-weight: 250;
 }
 
 .home-header-text > h2 {
@@ -77,10 +90,79 @@ a:hover {
 		rgba(63, 96, 84, 0.8),
 		rgba(63, 96, 84, 0.1)
 	);
+	font-family: serif;
 }
 
 .home-header-text {
 	padding-top: 20%;
+	text-align: left;
+}
+
+/* Strain Information */
+.details-container {
+	display: grid;
+	grid-template-columns: repeat(4 1fr);
+}
+
+.details-strain-name {
+	color: rgb(129, 179, 119);
+	text-transform: uppercase;
+	font-size: 5vmin;
+	font-weight: 400;
+	line-height: 11vmin;
+	display: inline-block;
+	padding: 1vmin;
+	width: 73vmin;
+	letter-spacing: 0.5vmin;
+	border: rgba(0, 0, 0, 0);
+	border-bottom: rgb(129, 179, 119);
+	border-style: solid;
+	border-width: 0.3vmin;
+	margin: 5vmin;
+	text-align: center;
+}
+
+.details-image {
+	grid-column: 1 / span 2;
+	filter: sepia(25%) hue-rotate(180deg);
+	display: block;
+	width: 75vmin;
+	margin: 0 auto;
+	border-radius: 1.5vmin;
+}
+
+.details-text {
+	padding-inline-start: 0;
+	grid-column: 3 / span 2;
+}
+.details-property {
+	font-size: 2.5vmin;
+	color: rgb(129, 179, 119);
+	font-weight: 450;
+	letter-spacing: 0.3vmin;
+	list-style: none;
+	text-align: left;
+	margin-top: 2.5vmin;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.details-value {
+	font-size: 2vmin;
+	font-style: italic;
+	list-style: none;
+	color: grey;
+	text-align: left;
+	margin: 1vmin 0 0 5vmin;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Strain Form */
+.strain-form {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.strains-form button {
+	width: 100%;
 }
 
 @media (max-width: 700px) {
@@ -97,8 +179,20 @@ a:hover {
 	}
 	.app-header a {
 		font-size: 0.6em;
-  }
-  .home-header-text {
-    padding-top: 15vh;
-  }
+	}
+	.home-header-text {
+		padding-top: 15vh;
+	}
+}
+
+@media (min-width: 1200px) {
+	.app-header {
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.app-header {
+		font-size: 2rem;
+	}
 }

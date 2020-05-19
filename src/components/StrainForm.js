@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StrainForm = ({ strain, handleSubmit, handleChange }) => (
-	<form onSubmit={handleSubmit}>
+	<form className='strain-form' onSubmit={handleSubmit}>
 		<label htmlFor='name'>Strain Name</label>
 		<input
 			placeholder='Strain Name'
