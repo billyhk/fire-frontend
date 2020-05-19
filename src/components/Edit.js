@@ -14,6 +14,7 @@ const StrainEdit = ({ match }) => {
 			.then((res) => res.json())
 			.then((data) => {
 				setStrain({
+					id: data._id,
 					name: data.name,
 					genetics: data.genetics,
 					parents: data.parents,
@@ -39,10 +40,10 @@ const StrainEdit = ({ match }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const url = `${APIURL}/strains/`;
+		const url = `${APIURL}/strains/${strain.id}`;
 
 		fetch(url, {
-			method: 'POST',
+			method: 'PUT',
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
 			},
