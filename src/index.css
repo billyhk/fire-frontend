@@ -67,7 +67,7 @@ a {
 a:hover {
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
-	color: rgba(201, 124, 124, 0.719);
+	color: rgba(120, 33, 112, 0.865);
 	text-decoration: none;
 }
 
@@ -176,6 +176,16 @@ a:hover {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Form Header */
+
+.create-form-header {
+	color: white;
+}
+
+.edit-form-header {
+	color: white;
+}
+
 /* Strain Form */
 
 .strain-form-bg {
@@ -237,6 +247,66 @@ a:hover {
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 2vmin;
 	margin: 3vmin 0 0 0;
+}
+
+/* Modal */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1040;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	opacity: 0.5;
+}
+
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	outline: 0;
+}
+
+.modal {
+	z-index: 100;
+	background: rgba(75, 162, 194, 0.9);
+	position: relative;
+	margin: 1.75rem auto;
+	border-radius: 3px;
+	max-width: 500px;
+	padding: 2rem;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: center;
+}
+
+.modal-close-button {
+	font-size: 1.4rem;
+	font-weight: 600;
+	line-height: 1;
+	color: #000;
+	opacity: 0.5;
+	cursor: pointer;
+	border: none;
+	border: 2px solid rgb(85, 91, 148);
+	border-radius: 10px;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	text-transform: uppercase;
+}
+
+.modal-close-button:hover {
+	background-color: rgb(125, 128, 152);
+	color: rgba(255, 255, 255, 0.8);
+	border: 2px solid  rgba(255, 255, 255, 0.612);;
 }
 
 @media (max-width: 700px) {

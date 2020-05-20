@@ -63,13 +63,15 @@ const StrainEdit = ({ match }) => {
 	}
 	return (
 		<>
-			<h2>We greatly appreciate all of our contributors!</h2>
-			<h4>Please fill out the form below to edit data for {strain.name}.</h4>
-			{error && <p>Something went wrong... Please try again!</p>}
+			<div className='edit-form-header'>
+				<h2>We greatly appreciate all of our contributors!</h2>
+				<h4>Please fill out the form below to update {strain.name}.</h4>
+				{error && <p>Something went wrong... Please try again!</p>}
+			</div>
 			<StrainForm
 				strain={strain}
 				handleChange={handleChange}
-				handleSubmit={handleSubmit} 
+				handleSubmit={handleSubmit}
 			/>
 		</>
 	);

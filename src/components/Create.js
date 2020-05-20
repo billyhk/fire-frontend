@@ -5,7 +5,7 @@ import StrainForm from './StrainForm.js';
 
 const StrainCreate = () => {
 	const initialStrainState = {
-        name: '',
+		name: '',
 		genetics: '',
 		parents: '',
 		thcContent: '',
@@ -21,7 +21,7 @@ const StrainCreate = () => {
 		e.persist();
 		setStrain({
 			...strain,
-			[e.target.name]: e.target.value
+			[e.target.name]: e.target.value,
 		});
 	};
 
@@ -51,11 +51,18 @@ const StrainCreate = () => {
 	}
 	return (
 		<>
-			<img className='strain-form-bg' src='https://i.imgur.com/SR04reG.jpeg' alt='backgroundImg'/>
-			<h2>We greatly appreciate all of our contributors!</h2>
-			<h3>please fill out the form below to lend some love to our database</h3>
-			<h4>create a new strain...</h4>
-			{error && <p>Something went wrong... Please try again!</p>}
+			<div className='create-form-header'>
+				<img
+					className='strain-form-bg'
+					src='https://i.imgur.com/SR04reG.jpeg'
+					alt='backgroundImg'
+				/>
+				<h2>We greatly appreciate all of our contributors!</h2>
+				<h3>
+					Please fill out the form below to add a new strain to our database.
+				</h3>
+				{error && <p>Something went wrong... Please try again!</p>}
+			</div>
 			<StrainForm
 				strain={strain}
 				handleChange={handleChange}
