@@ -51,6 +51,7 @@ const StrainCreate = () => {
 	}
 	return (
 		<>
+			<img className='strain-form-bg' src='https://i.imgur.com/SR04reG.jpeg' alt='backgroundImg'/>
 			<h2>We greatly appreciate all of our contributors!</h2>
 			<h3>please fill out the form below to lend some love to our database</h3>
 			<h4>create a new strain...</h4>

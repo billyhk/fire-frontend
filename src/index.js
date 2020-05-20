@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  <Router>
+  <Router className='parent-styling'>
     <App />
   </Router>,
   document.getElementById('root')
