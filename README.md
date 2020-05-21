@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# f i r e
 
-## Available Scripts
+## Front-End Readme
 
-In the project directory, you can run:
+## Project Description
 
-### `yarn start`
+This app offers users the ability to explore information on various popular cannabis strains.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wireframes
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Home Page**  
+![Home Page](/public/front-end-images/home-page-wireframe-png.png)  
+**Information Page**  
+![Information Page](/public/front-end-images/show-page-wireframe-png.png)
+**Form Page**
+![Form Page](/public/front-end-images/form-page-wireframe-png.png)
 
-### `yarn test`
+## User Stories
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_**MVP User Stories**_ 
+-_As a user, I want to read about different strains of cannabis._ 
+-_As a user, I want to add, edit, and delete strain data._  
+-_As a user, I want to views strains of a particular category (i.e. indica/sativa/hybrid)._
 
-### `yarn build`
+_**Post MVP Stretch Goals**_ 
+-_As a user, I want to save certain strains as favorites._ 
+-_As a user, I want to search for strains by name or other properties._  
+-_As a user, I want to sign up and create a personal account._
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Sample of Data from Back-End
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```json
+{
+"_id": "5ec5041b45f19100047b3684",
+"title": "Hall of Fame",
+"name": "Amnesia Haze",
+"genetics": "Sativa dominant (70%)",
+"plantCategory": "Sativa",
+"popular": true,
+"parents": "Jamaican, Afghani, Laos, Hawaiian",
+"thcContent": "22 - 24%",
+"cbdContent": "Low",
+"smellAndFlavor": "Sweet, Pepper, Citrus, Spicy, Earthy",
+"effect": "Uplifting, Euphoric, Cerebral, Strong, Energetic",
+"info": "Amnesia Haze has a classic, long, maturing psychotropic sativa lineage tamed with a dash of dense mountain indica. Two land-races and a hybrid have been expertly combined to produce a THC powerhouse that has an effect that even the most experienced cannabis aficionados will find undeniable and insistent. Amnesia Haze has dense flower clusters that are hard to the touch when cured lovingly. So well-crystallised are the firm nuggets, that they seem to have been lightly glazed with some kind of exotic cardamom and lime, marjoram and mandarin flavoured toffee that sparkles and refracts the light. The overdrive trichome production makes Amnesia Haze prized for hashes and other extractions. Warmed and twenty tonne pressed, the clear honey-coloured 22% THC resin waterfalls are a sticky sight to behold and an incomparable aromatic revelation.",
+},
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Component Hierarchy
 
-### `yarn eject`
+![Component Hierarchy](/public/front-end-images/component-tree-png.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Front-End Objectives and Technologies Used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ -_Data from deployed Mongo database is rendered onto multiple pages via React.js and React-Router._
+ -_Interaction with back-end functionality to Create, Read, Update, and Destroy (CRUD) via React components._

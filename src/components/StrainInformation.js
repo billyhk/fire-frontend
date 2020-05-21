@@ -3,6 +3,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { APIURL } from '../config.js';
 
 const StrainInformation = ({ match }) => {
+	window.scrollTo(0, 0);
+
 	const [deleted, setDeleted] = useState(false);
 	const [error, setError] = useState(false);
 	const [strain, setStrain] = useState(null);
