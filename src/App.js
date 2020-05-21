@@ -11,6 +11,7 @@ import Modal from './components/Modal';
 import useModal from './components/useModal';
 import './comp-css/modal.css';
 import './comp-css/form.css';
+import { FaBars, FaPlus, FaHome } from 'react-icons/fa';
 
 const App = () => {
 	const { isShowing, toggle } = useModal();
@@ -19,7 +20,7 @@ const App = () => {
 
 	return (
 		<>
-			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
+			<Modal isShowing={isShowing} hide={toggle} />
 			<header>
 				<nav>
 					<Link className='links' to='/'>
@@ -35,18 +36,18 @@ const App = () => {
 					<ul>
 						<Link className='links' to='/'>
 							<li>
-								<img
-									className='nav-icon'
-									src='src/images/icons/home.jpg'
-									alt='home.png'
-								/>
+								<FaHome alt='home' />
 							</li>
 						</Link>
 						<Link className='links' to='/strains'>
-							<li>all</li>
+							<li>
+								<FaBars alt='all strains' />
+							</li>
 						</Link>
 						<Link className='links' to='/create'>
-							<li>create</li>
+							<li>
+								<FaPlus alt='create strain' />
+							</li>
 						</Link>
 					</ul>
 				</nav>
