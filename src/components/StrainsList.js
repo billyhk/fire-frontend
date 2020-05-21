@@ -10,7 +10,7 @@ const StrainsList = (props) => {
 		fetch(`${APIURL}/strains`)
 			.then((res) => res.json())
 			.then((data) => {
-                setStrains(data);
+				setStrains(data);
 			})
 			.catch(() => {
 				setError(true);
@@ -25,15 +25,55 @@ const StrainsList = (props) => {
 	if (strains.length === 0) {
 		return <div>Loading...</div>;
 	}
+	console.log(strains);
 
 	return (
 		<div className='strains-gallery-container'>
-			{strains.map((strain) => (
-				<div>
-					<img alt='' src=''/>
-					<Link to={`/strains/${strain._id}`}>{strain.name}</Link>
-				</div>
-			))}
+			<h2 style={{ color: 'white' }}>Indica</h2>
+			{strains.map((strain) =>
+				strain.plantCategory === 'Indica' ? (
+					<div>
+						<img alt='' src='' />
+						<Link to={`/strains/${strain._id}`}> {strain.name}</Link>
+					</div>
+				) : null
+			)}
+			<h2 style={{ color: 'white' }}>Sativa</h2>
+			{strains.map((strain) =>
+				strain.plantCategory === 'Sativa' ? (
+					<div>
+						<img alt='' src='' />
+						<Link to={`/strains/${strain._id}`}> {strain.name}</Link>
+					</div>
+				) : null
+			)}
+			<h2 style={{ color: 'white' }}>Hybrid: Indica Dominant</h2>
+			{strains.map((strain) =>
+				strain.plantCategory === 'Hybrid: Indica Dominant' ? (
+					<div>
+						<img alt='' src='' />
+						<Link to={`/strains/${strain._id}`}> {strain.name}</Link>
+					</div>
+				) : null
+			)}
+			<h2 style={{ color: 'white' }}>Hybrid: Sativa Dominant</h2>
+			{strains.map((strain) =>
+				strain.plantCategory === 'Hybrid: Sativa Dominant' ? (
+					<div>
+						<img alt='' src='' />
+						<Link to={`/strains/${strain._id}`}> {strain.name}</Link>
+					</div>
+				) : null
+			)}
+			<h2 style={{ color: 'white' }}>Hybrid: 50/50</h2>
+			{strains.map((strain) =>
+				strain.plantCategory === 'Hybrid: 50/50' ? (
+					<div>
+						<img alt='' src='' />
+						<Link to={`/strains/${strain._id}`}> {strain.name}</Link>
+					</div>
+				) : null
+			)}
 		</div>
 	);
 };
