@@ -57,6 +57,7 @@ const StrainCreate = () => {
 					src='https://i.imgur.com/SR04reG.jpeg'
 					alt='backgroundImg'
 				/>
+				<h2 className='page-title'>Create your own Strain</h2>
 				<h2>We greatly appreciate all of our contributors!</h2>
 				<h3>
 					Please fill out the form below to add a new strain to our database.
