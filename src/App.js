@@ -8,8 +8,9 @@ import Edit from './components/Edit';
 import StrainInformation from './components/StrainInformation.js';
 import StrainsList from './components/StrainsList';
 import Modal from './components/Modal';
-import './comp-css/modal.css';
 import useModal from './components/useModal';
+import './comp-css/modal.css';
+import './comp-css/form.css';
 
 const App = () => {
 	const { isShowing, toggle } = useModal();
@@ -18,8 +19,39 @@ const App = () => {
 
 	return (
 		<>
-			<Modal isShowing={isShowing} hide={toggle} />
-			<header className='app-header'>
+			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
+			<header>
+				<nav>
+					<Link className='links' to='/'>
+						<h1>| i r e</h1>
+					</Link>
+					<Link className='links' to='/'>
+						<img
+							className='nav-icon'
+							src='https://github.com/andresaugusto/FIRE-front/blob/master/src/images/icons/home.png'
+							alt='backgroundImg'
+						/>
+					</Link>
+					<ul>
+						{/* <Link className='links' to='/'>
+							<li>
+								<img
+									className='nav-icon'
+									src='FIRE-from/src/images/icons/home.png'
+									alt='backgroundImg'
+								/>
+							</li>
+						</Link> */}
+						<Link className='links' to='/strains'>
+							<li>all</li>
+						</Link>
+						<Link className='links' to='/create'>
+							<li>create</li>
+						</Link>
+					</ul>
+				</nav>
+			</header>
+			{/* <header className='app-header'>
 				<h1>f i r e</h1>
 				<div className='nav-button'>
 					<Link to='/'>
@@ -34,7 +66,7 @@ const App = () => {
 						<h1>add strain</h1>
 					</Link>
 				</div>
-			</header>
+			</header> */}
 			<main>
 				<Switch>
 					<Route exact path='/' component={Home} />

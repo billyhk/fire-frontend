@@ -26,7 +26,7 @@ Modal
 	z-index: 100;
 	font-family: Arial, Helvetica, sans-serif;
 	letter-spacing: 0.7vmin;
-	background: rgba(0, 0, 0, 0.75);
+	background: rgba(0, 0, 0, 0.85);
 	position: fixed;
 	top: 1rem;
 	bottom: 1rem;
@@ -63,12 +63,11 @@ a {
 	border-width: 1px;
 	border-radius: 0.5vmin;
 	border-color: rgb(255, 255, 255);
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0);
 	font-size: 4vmin;
 	color: rgb(255, 255, 255);
 	font-weight: 600;
 	letter-spacing: 0.7vmin;
-	text-align: left;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 2vmin;
 	margin: 10vmin 0 0 0;
@@ -97,15 +96,7 @@ a {
 
 	.modal-close-button {
 		width: 100%;
-		max-width: 700px;
 		font-size: 2rem;
-		color: rgb(255, 255, 255);
-		font-weight: 600;
-		letter-spacing: 0.7vmin;
-		text-align: left;
-		font-family: Arial, Helvetica, sans-serif;
-		padding: 2vmin;
-		margin: 10%;
-		transition: background-color 0.2s;
+		margin-top: 10%;
 	}
 }

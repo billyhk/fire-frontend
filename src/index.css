@@ -9,15 +9,45 @@ body {
 	text-align: center;
 }
 
-button {
-	font-size: 1rem;
-	padding: 0.5rem 0.75rem;
-}
-
 ul {
-
 	padding-inline-start: 0;
 }
+
+/* HEADER */
+
+header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+header nav {
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+nav h1 {
+	font-size: 8vmin;
+	text-decoration: overline;
+}
+
+nav li {
+	font-size: 3vmin;
+	display: inline-block;
+	padding-left: 4vmin;
+	list-style: none;
+	letter-spacing: 0.5vmin;
+}
+
+.links {
+	color: white;
+	text-decoration: none;
+}
+
+/* * */
 
 input {
 	box-sizing: border-box;
@@ -32,17 +62,17 @@ input {
 }
 
 .page-title {
-	color: rgb(182, 230, 173);
+	color: rgb(255, 255, 255);
 	text-transform: uppercase;
 	font-size: 4vmin;
 	font-weight: 600;
 	line-height: 11vmin;
 	display: inline-block;
-	padding: 1vmin;
-	width: 73vmin;
+	padding: 0;
+	/* width: 73vmin; */
 	letter-spacing: 0.5vmin;
 	border: rgba(0, 0, 0, 0);
-	border-bottom: rgb(129, 179, 119);
+	border-top: rgb(147, 119, 179);
 	border-style: solid;
 	border-width: 0.3vmin;
 	margin: 5vmin;
@@ -78,7 +108,7 @@ input {
 a {
 	margin: 0 1.25rem 0 1.25rem;
 	text-decoration: none;
-	color: rgb(150, 70, 150);
+	color: rgb(159, 129, 194);
 	display: inline-block;
 }
 
@@ -89,7 +119,7 @@ a {
 a:hover {
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
-	color: rgba(120, 33, 112, 0.865);
+	color: rgb(159, 129, 194);
 	text-decoration: none;
 }
 
@@ -197,159 +227,6 @@ a:hover {
 	margin: 1vmin 0 0 5vmin;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* Form Header */
-
-.create-form-header {
-	color: white;
-}
-
-.edit-form-header {
-	color: white;
-}
-
-/* Strain Form */
-
-.strain-form-bg {
-	filter: blur(.0vmin) brightness(60%) contrast(100%) saturate(50%);
-	display: flex;
-	position: absolute;
-	width: 100%;
-	height: 140%;
-	object-fit: cover;
-	z-index: -10;
-}
-
-.strain-form {
-	margin: 10vmin;
-	justify-content: center;
-	align-items: center;
-	text-align: left;
-}
-
-.form-title {
-	margin: 0;
-	font-size: 2.5vmin;
-	color: rgb(255, 255, 255);
-	font-weight: 700;
-	letter-spacing: 0.7vmin;
-	text-shadow: 0vmin 0vmin .2vmin black;
-	list-style: none;
-	text-align: left;
-	margin-top: 2.5vmin;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.form-input {
-	border-width: 0.1vmin;
-	max-height: 200px;
-	border-radius: 0.5vmin;
-	border-color: rgb(255, 255, 255);
-	background: rgba(0, 0, 0, 0);
-	margin: 0 0 5vmin 0;
-	font-size: 1.75vmin;
-	color: rgb(255, 255, 255);
-	font-weight: 450;
-	letter-spacing: 0.3vmin;
-	text-shadow: 0vmin 0vmin .2vmin black;
-	list-style: none;
-	text-align: left;
-	margin-top: 1vmin;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.submit-button {
-	width: 100%;
-	border-width: 0.2vmin;
-	border-radius: 0.5vmin;
-	border-color: rgb(255, 255, 255);
-	background: rgba(0, 0, 0, 0.5);
-	font-size: 2.5vmin;
-	color: rgb(255, 255, 255);
-	font-weight: 600;
-	letter-spacing: 0.7vmin;
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 2vmin;
-	margin: 3vmin 0 0 0;
-}
-
-/* Modal
-.modal-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1040;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.75);
-}
-
-.modal-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1050;
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	outline: 0;
-}
-
-.modal {
-	z-index: 100;
-	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	letter-spacing: 0.7vmin;
-	background: rgba(0, 0, 0, 0.75);
-	position: fixed;
-	top: 1rem;
-	bottom: 1rem;
-	left: 1rem;
-	right: 1rem;
-	padding: 1rem;
-	border: .1vmin solid white;
-}
-
-.modal-header {
-	font-size: 7vmin;
-	color: white;
-	font-weight: 600;
-	display: flex;
-	justify-content: center;
-	margin: 15vmin 0;
-}
-
-.modal-text {
-	color: white;
-	margin: 0 0 10vmin;
-	font-size: 4vmin;
-}
-
-.modal-close-button {
-	width: 100%;
-	max-width: 700px;
-	border-width: 0.2vmin;
-	border-radius: 0.5vmin;
-	border-color: rgb(255, 255, 255);
-	background: rgba(0, 0, 0, 0.5);
-	font-size: 4vmin;
-	color: rgb(255, 255, 255);
-	font-weight: 600;
-	letter-spacing: 0.7vmin;
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 2vmin;
-	margin: 10vmin 0 0 0;
-	transition: background-color 0.2s;
-}
-
-.modal-close-button:hover {
-	background-color: rgb(48, 48, 48);
-	color: rgba(255, 255, 255, 0.8);
-	border: 2px solid  rgba(255, 255, 255, 0.612);
-} */
 
 /* FOOTER */
 
