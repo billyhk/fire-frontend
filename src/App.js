@@ -25,23 +25,23 @@ const App = () => {
 					<Link className='links' to='/'>
 						<h1>| i r e</h1>
 					</Link>
-					<Link className='links' to='/'>
+					{/* <Link className='links' to='/'>
 						<img
 							className='nav-icon'
 							src='https://github.com/andresaugusto/FIRE-front/blob/master/src/images/icons/home.png'
-							alt='backgroundImg'
+							alt='home.png'
 						/>
-					</Link>
+					</Link> */}
 					<ul>
-						{/* <Link className='links' to='/'>
+						<Link className='links' to='/'>
 							<li>
 								<img
 									className='nav-icon'
-									src='FIRE-from/src/images/icons/home.png'
-									alt='backgroundImg'
+									src='src/images/icons/home.jpg'
+									alt='home.png'
 								/>
 							</li>
-						</Link> */}
+						</Link>
 						<Link className='links' to='/strains'>
 							<li>all</li>
 						</Link>
