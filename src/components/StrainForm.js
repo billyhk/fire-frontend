@@ -10,11 +10,24 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='Strain Name'
-				value={strain.name}
+				defaultValue={strain.name}
 				name='name'
 				onChange={handleChange}
 				required
 				id='name'
+			/>
+
+			<label htmlFor='plantCategory' className='form-title'>
+				Plant Category
+			</label>
+			<input
+				className='form-input'
+				placeholder='Indica | Sativa | Hybrid: Indica Dominant | Hybrid: Sativa Dominant | Hybrid: 50/50'
+				defaultValue={strain.plantCategory}
+				name='plantCategory'
+				onChange={handleChange}
+				required
+				id='plantCategory'
 			/>
 
 			<label htmlFor='genetics' className='form-title'>
@@ -22,8 +35,8 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			</label>
 			<input
 				className='form-input'
-				placeholder='Genetics'
-				value={strain.genetics}
+				placeholder='Indica (%) | Sativa (%) | Hybrid (%)'
+				defaultValue={strain.genetics}
 				name='genetics'
 				onChange={handleChange}
 				required
@@ -36,7 +49,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='Parents'
-				value={strain.parents}
+				defaultValue={strain.parents}
 				name='parents'
 				onChange={handleChange}
 				required
@@ -49,7 +62,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='THC Content'
-				value={strain.thcContent}
+				defaultValue={strain.thcContent}
 				name='thcContent'
 				onChange={handleChange}
 				required
@@ -62,7 +75,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='CBD Content'
-				value={strain.cbdContent}
+				defaultValue={strain.cbdContent}
 				name='cbdContent'
 				onChange={handleChange}
 				required
@@ -75,7 +88,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='Smell and Flavor'
-				value={strain.smellAndFlavor}
+				defaultValue={strain.smellAndFlavor}
 				name='smellAndFlavor'
 				onChange={handleChange}
 				required
@@ -88,7 +101,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='Effect'
-				value={strain.effect}
+				defaultValue={strain.effect}
 				name='effect'
 				onChange={handleChange}
 				required
@@ -101,7 +114,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='Description'
-				value={strain.info}
+				defaultValue={strain.info}
 				name='info'
 				onChange={handleChange}
 				required
@@ -114,7 +127,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<input
 				className='form-input'
 				placeholder='Image'
-				value={strain.mainImage}
+				defaultValue={strain.mainImage}
 				name='mainImage'
 				onChange={handleChange}
 				required

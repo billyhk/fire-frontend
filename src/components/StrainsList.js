@@ -25,52 +25,61 @@ const StrainsList = (props) => {
 	if (strains.length === 0) {
 		return <div>Loading...</div>;
 	}
-	console.log(strains);
 
 	return (
 		<div className='strains-gallery-container'>
 			<h2 className='strain-type'>Indica</h2>
 			{strains.map((strain) =>
 				strain.plantCategory === 'Indica' ? (
-					<div>
-						<img alt='' src='' />
-						<Link to={`/strains/${strain._id}`} className='list-strain-name'> {strain.name}</Link>
+					<div key={strain._id}>
+						<Link to={`/strains/${strain._id}`} className='list-strain-name'>
+							{' '}
+							{strain.name}
+						</Link>
 					</div>
 				) : null
 			)}
 			<h2 className='strain-type'>Sativa</h2>
 			{strains.map((strain) =>
 				strain.plantCategory === 'Sativa' ? (
-					<div>
-						<img alt='' src='' />
-						<Link to={`/strains/${strain._id}`} className='list-strain-name'> {strain.name}</Link>
+					<div key={strain._id}>
+						<Link to={`/strains/${strain._id}`} className='list-strain-name'>
+							{' '}
+							{strain.name}
+						</Link>
 					</div>
 				) : null
 			)}
 			<h2 className='strain-type'>Hybrid: Indica Dominant</h2>
 			{strains.map((strain) =>
 				strain.plantCategory === 'Hybrid: Indica Dominant' ? (
-					<div>
-						<img alt='' src='' />
-						<Link to={`/strains/${strain._id}`} className='list-strain-name'> {strain.name}</Link>
+					<div key={strain._id}>
+						<Link to={`/strains/${strain._id}`} className='list-strain-name'>
+							{' '}
+							{strain.name}
+						</Link>
 					</div>
 				) : null
 			)}
 			<h2 className='strain-type'>Hybrid: Sativa Dominant</h2>
 			{strains.map((strain) =>
 				strain.plantCategory === 'Hybrid: Sativa Dominant' ? (
-					<div>
-						<img alt='' src='' />
-						<Link to={`/strains/${strain._id}`} className='list-strain-name'> {strain.name}</Link>
+					<div key={strain._id}>
+						<Link to={`/strains/${strain._id}`} className='list-strain-name'>
+							{' '}
+							{strain.name}
+						</Link>
 					</div>
 				) : null
 			)}
 			<h2 className='strain-type'>Hybrid: 50/50</h2>
 			{strains.map((strain) =>
 				strain.plantCategory === 'Hybrid: 50/50' ? (
-					<div>
-						<img alt='' src='' />
-						<Link to={`/strains/${strain._id}`} className='list-strain-name'> {strain.name}</Link>
+					<div key={strain._id}>
+						<Link to={`/strains/${strain._id}`} className='list-strain-name'>
+							{' '}
+							{strain.name}
+						</Link>
 					</div>
 				) : null
 			)}

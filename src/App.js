@@ -10,11 +10,11 @@ import StrainsList from './components/StrainsList';
 import Modal from './components/Modal';
 import useModal from './components/useModal';
 import './comp-css/modal.css';
-import './comp-css/form.css';
 import './comp-css/strainList.css';
 import './comp-css/headerNav.css';
 import './comp-css/createAndEdit.css';
 import './comp-css/footerSignatures.css';
+import './comp-css/strainInformation.css';
 import { FaBars, FaPlus, FaHome } from 'react-icons/fa';
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
 
 	return (
 		<>
-			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
+			<Modal isShowing={isShowing} hide={toggle} />
 			<header>
 				<nav>
 					<Link className='links' to='/'>

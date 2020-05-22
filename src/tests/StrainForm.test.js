@@ -23,6 +23,6 @@ const strain = {
 describe('StrainForm Component', () => {
 	const component = shallow(<StrainForm strain={strain} />);
 	it('should return an input field', () => {
-		expect(component.find('input').length).toBe(9);
+		expect(component.find('input').length).toBe(10);
 	});
 });

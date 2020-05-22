@@ -16,12 +16,15 @@ const StrainEdit = ({ match }) => {
 				setStrain({
 					id: data._id,
 					name: data.name,
+					plantCategory: data.plantCategory,
 					genetics: data.genetics,
 					parents: data.parents,
 					thcContent: data.thcContent,
 					cbdContent: data.cbdContent,
 					smellAndFlavor: data.smellAndFlavor,
 					effect: data.effect,
+					info: data.info,
+					mainImage: data.mainImage,
 				});
 			})
 			.catch(() => {
@@ -64,8 +67,13 @@ const StrainEdit = ({ match }) => {
 	return (
 		<>
 			<div className='edit-form-header'>
-				<h2>We greatly appreciate all of our contributors!</h2>
-				<h4>Please fill out the form below to update {strain.name}.</h4>
+				<h2 className='page-title'>Strain Editor</h2>
+				<h2 className='form-header-1'>
+					We greatly appreciate all of our contributors!
+				</h2>
+				<h2 className='form-header-2'>
+					Please use the form below to update {strain.name}.
+				</h2>
 				{error && <p>Something went wrong... Please try again!</p>}
 			</div>
 			<StrainForm

@@ -51,22 +51,6 @@ input {
 	text-align: center;
 }
 
-::placeholder {
-	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: white;
-	opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-	/* Internet Explorer 10-11 */
-	color: white;
-}
-
-::-ms-input-placeholder {
-	/* Microsoft Edge */
-	color: white;
-}
-
 .app-header {
 	display: flex;
 	justify-content: space-between;
@@ -115,66 +99,6 @@ input {
 	padding-top: 20%;
 	text-align: left;
 }
-
-/* Strain Information */
-.details-container {
-	display: grid;
-	grid-template-columns: repeat(4 1fr);
-}
-
-.details-strain-name {
-	color: rgb(129, 179, 119);
-	text-transform: uppercase;
-	font-size: 5vmin;
-	font-weight: 400;
-	line-height: 11vmin;
-	display: inline-block;
-	padding: 1vmin;
-	width: 73vmin;
-	letter-spacing: 0.5vmin;
-	border: rgba(0, 0, 0, 0);
-	border-bottom: rgb(129, 179, 119);
-	border-style: solid;
-	border-width: 0.3vmin;
-	margin: 5vmin;
-	text-align: center;
-}
-
-.details-image {
-	grid-column: 1 / span 2;
-	display: block;
-	width: 75vmin;
-	margin: 0 auto;
-	border-radius: 1.5vmin;
-}
-
-.details-text {
-	padding-inline-start: 0;
-	grid-column: 3 / span 2;
-}
-
-.details-property {
-	font-size: 2.5vmin;
-	color: rgb(129, 179, 119);
-	font-weight: 450;
-	letter-spacing: 0.3vmin;
-	list-style: none;
-	text-align: left;
-	margin-top: 2.5vmin;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.details-value {
-	font-size: 2vmin;
-	font-style: italic;
-	list-style: none;
-	color: grey;
-	text-align: left;
-	margin: 1vmin 0 0 5vmin;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
 
 /* MEDIA QUERIES */
 

@@ -6,6 +6,7 @@ import StrainForm from './StrainForm.js';
 const StrainCreate = () => {
 	const initialStrainState = {
 		name: '',
+		plantCategory: '',
 		genetics: '',
 		parents: '',
 		thcContent: '',
@@ -13,7 +14,7 @@ const StrainCreate = () => {
 		smellAndFlavor: '',
 		effect: '',
 		info: '',
-		mainImage: ''
+		mainImage: '',
 	};
 	const [strain, setStrain] = useState(initialStrainState);
 	const [createdId, setCreatedId] = useState(null);
@@ -54,10 +55,12 @@ const StrainCreate = () => {
 		<>
 			<div className='create-form-header'>
 				<h2 className='page-title'>Create your own Strain</h2>
-				<h2>We greatly appreciate all of our contributors!</h2>
-				<h3>
+				<h2 className='form-header-1'>
+					We greatly appreciate all of our contributors!
+				</h2>
+				<h2 className='form-header-2'>
 					Please fill out the form below to add a new strain to our database.
-				</h3>
+				</h2>
 				{error && <p>Something went wrong... Please try again!</p>}
 			</div>
 			<StrainForm

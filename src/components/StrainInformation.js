@@ -44,13 +44,14 @@ const StrainInformation = ({ match }) => {
 			<h2 className='page-title'>{strain.name}</h2>
 			<div className='details-container'>
 				<img src={strain.mainImage} className='details-image' alt='' />
-				<ul className='details-text'>
+				<ul className='details-text-1'>
 					<li className='details-property'>Genetics :</li>
 					<li className='details-value'>{strain.genetics}</li>
 
 					<li className='details-property'>Parents :</li>
 					<li className='details-value'>{strain.parents}</li>
-
+				</ul>
+				<ul className='details-text-2'>
 					<li className='details-property'>THC Content :</li>
 					<li className='details-value'>{strain.thcContent}</li>
 
@@ -62,14 +63,17 @@ const StrainInformation = ({ match }) => {
 
 					<li className='details-property'>Effect :</li>
 					<li className='details-value'>{strain.effect}</li>
+
+					<li className='details-property'>Description :</li>
+					<li className='details-value'>{strain.info}</li>
 				</ul>
-				<li className='details-property'>Description :</li>
-				<li className='details-value'>{strain.info}</li>
 			</div>
-			<Link to={`/strains/${match.params.id}/edit`}>
-				<button>Update Strain</button>
+			<Link className='anchor-to-fix' to={`/strains/${match.params.id}/edit`}>
+				<button className='details-update-button'>Update Strain</button>
 			</Link>
-			<button onClick={onDeletedStrain}>Delete Strain</button>
+			<button className='details-delete-button' onClick={onDeletedStrain}>
+				Delete Strain
+			</button>
 
 			<div className='additional-images'>
 				{strain.additionalImages.length === 0
