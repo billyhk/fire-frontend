@@ -53,11 +53,6 @@ const StrainCreate = () => {
 	return (
 		<>
 			<div className='create-form-header'>
-				<img
-					className='strain-form-bg'
-					src='https://i.imgur.com/SR04reG.jpeg'
-					alt='backgroundImg'
-				/>
 				<h2 className='page-title'>Create your own Strain</h2>
 				<h2>We greatly appreciate all of our contributors!</h2>
 				<h3>

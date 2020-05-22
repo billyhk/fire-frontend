@@ -1,0 +1,48 @@
+/* STRAIN LIST */
+
+.strain-type {
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	font-size: 5vmin;
+	font-weight: 600;
+	line-height: 11vmin;
+	display: inline-block;
+	padding: 1vmin 0;
+	letter-spacing: 0.5vmin;
+	border: rgba(0, 0, 0, 0);
+	border-top: rgb(147, 119, 179);
+	border-style: solid;
+	border-width: 0.3vmin;
+	margin: 15vmin 0 2vmin 0;
+	text-align: center;
+}
+
+.list-strain-name {
+	font-size: 5vmin;
+	letter-spacing: 0.5vmin;
+	line-height: 10vmin;
+	margin: 0 1.25rem 0 1.25rem;
+	text-decoration: none;
+	color: rgb(159, 129, 194);
+	display: inline;
+}
+
+@media (min-width: 900px) {
+	.strains-gallery-container {
+		padding-inline-start: 0;
+		display: grid;
+		grid-template-columns: repeat (auto-fill, minmax (26vmin, 1fr));
+		margin: 1vmin;
+	}
+
+	.strain-type {
+		font-size: 2rem;
+		line-height: 11vmin;
+		padding: 0.2rem 0;
+	}
+
+	.list-strain-name {
+		font-size: 1.8rem;
+		line-height: 4rem;
+	}
+}

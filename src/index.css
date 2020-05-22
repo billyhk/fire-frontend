@@ -1,5 +1,10 @@
 body {
-	background: black;
+	background: url(https://i.imgur.com/SR04reG.jpeg) bottom left no-repeat;
+	/* background: url(https://download.hipwallpaper.com/desktop/1920/1080/97/87/gC7Wu6.jpg) top left no-repeat;  */
+	background-attachment: fixed;
+	background-size: cover;
+	background-blend-mode: saturation;
+	background-color: rgba(0, 0, 0, 0.646);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,44 +12,11 @@ body {
 		sans-serif;
 	margin: 0 auto;
 	text-align: center;
+	text-shadow: 0vmin 0vmin 1vmin black;
 }
 
 ul {
 	padding-inline-start: 0;
-}
-
-/* HEADER */
-
-header {
-	position: sticky;
-	top: 0;
-	z-index: 100;
-}
-
-header nav {
-	background-color: rgba(0, 0, 0, 0.5);
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-
-nav h1 {
-	font-size: 8vmin;
-	text-decoration: overline;
-}
-
-nav li {
-	font-size: 3vmin;
-	display: inline-block;
-	padding-left: 4vmin;
-	list-style: none;
-	letter-spacing: 0.5vmin;
-}
-
-.links {
-	color: white;
-	text-decoration: none;
 }
 
 /* * */
@@ -99,33 +71,7 @@ input {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
-	background: rgb(88, 176, 88);
 	min-height: 10vmin;
-}
-
-.nav-button > a,
-.nav-button > h1,
-a {
-	margin: 0 1.25rem 0 1.25rem;
-	text-decoration: none;
-	color: rgb(159, 129, 194);
-	display: inline-block;
-}
-
-.strains-gallery-container a {
-	font-size: 2em;
-}
-
-a:hover {
-	transition: 0.5s;
-	-webkit-transition: 0.5s;
-	color: rgb(159, 129, 194);
-	text-decoration: none;
-}
-
-.app-header > h1 {
-	margin-left: 7%;
-	text-decoration: overline;
 }
 
 .home-header {
@@ -228,48 +174,7 @@ a:hover {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* FOOTER */
 
-/* CONTACT INFO */
-
-ul .sign-profile-link {
-	display: inline-block;
-	list-style: none;
-	color: rgb(161, 189, 120);
-	font-size: 2.5vmin;
-	margin-top: 20vmin;
-}
-
-li .sign-profile-link {
-	padding: 0vmin 2vmin;
-	line-height: 5vmin;
-	letter-spacing: 0.5vmin;
-}
-
-a .sign-profile-link {
-	text-emphasis: none;
-}
-
-.sign-email {
-	color: rgb(161, 189, 120);
-	font-size: 2.8vmin;
-	padding: 4vmin 1vmin 4vmin 1vmin;
-	margin: 0 0 4vmin 0;
-	letter-spacing: 1.5vmin;
-}
-
-.sign-date {
-	color: rgb(161, 189, 120);
-	font-family: 'Playfair Display', serif;
-	font-size: 8vmin;
-	font-weight: 300;
-	font-style: italic;
-}
-
-.sign-first-letter {
-	color: white;
-	font-size: 10vmin;
-}
 
 /* MEDIA QUERIES */
 

@@ -10,16 +10,6 @@
 
 /* Strain Form */
 
-.strain-form-bg {
-	filter: blur(0.8vmin) brightness(50%) contrast(70%) saturate(50%);
-	display: flex;
-	position: absolute;
-	width: 100%;
-	height: 140%;
-	object-fit: cover;
-	z-index: -10;
-}
-
 .strain-form {
 	margin: 10vmin;
 	justify-content: center;
@@ -33,7 +23,6 @@
 	color: rgb(255, 255, 255);
 	font-weight: 700;
 	letter-spacing: 0.7vmin;
-	text-shadow: 0vmin 0vmin 0.2vmin black;
 	list-style: none;
 	text-align: left;
 	margin-top: 2.5vmin;

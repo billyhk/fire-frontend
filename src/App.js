@@ -11,6 +11,10 @@ import Modal from './components/Modal';
 import useModal from './components/useModal';
 import './comp-css/modal.css';
 import './comp-css/form.css';
+import './comp-css/strainList.css';
+import './comp-css/headerNav.css';
+import './comp-css/createAndEdit.css';
+import './comp-css/footerSignatures.css';
 import { FaBars, FaPlus, FaHome } from 'react-icons/fa';
 
 const App = () => {
@@ -18,13 +22,13 @@ const App = () => {
 
 	return (
 		<>
-			<Modal isShowing={isShowing} hide={toggle} />
+			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
 			<header>
 				<nav>
 					<Link className='links' to='/'>
-						<h1>| i r e</h1>
+						<h1 className='header-title-left'>| i r e</h1>
 					</Link>
-					<ul>
+					<ul className='header-links-right'>
 						<Link className='links' to='/'>
 							<li>
 								<FaHome alt='home' />
@@ -53,30 +57,30 @@ const App = () => {
 				</Switch>
 			</main>
 			<footer>
-				<ul className='sign-profile-link'>
+				<ul>
+					<li className='sign-profile-link'>
+						<a
+							className='sign-profile-link'
+							href='https://www.linkedin.com/in/etinamoreno/'>
+							ERNESTINE M
+						</a>
+					</li>
+					<li className='sign-profile-link'>
+						<a
+							className='sign-profile-link'
+							href='https://www.linkedin.com/in/williamhkaufman/'>
+							WILLIAM K
+						</a>
+					</li>
 					<li className='sign-profile-link'>
 						<a
 							className='sign-profile-link'
 							href='https://www.linkedin.com/in/andresortizmontalvo/'>
-							L I N K E D I N
-						</a>
-					</li>
-					<li className='sign-profile-link'>
-						<a
-							className='sign-profile-link'
-							href='https://github.com/andresaugusto'>
-							G I T H U B
-						</a>
-					</li>
-					<li className='sign-profile-link'>
-						<a
-							className='sign-profile-link'
-							href='https://codepen.io/andresaugusto'>
-							C O D E P E N
+							ANDRÉS O M
 						</a>
 					</li>
 				</ul>
-				<div className='sign-email'>andres.augusto@icloud.com</div>
+				{/* <div className='sign-email'>andres.augusto@icloud.com</div> */}
 				<span className='sign-date'>
 					<small>
 						20<span className='sign-first-letter'>20</span>
