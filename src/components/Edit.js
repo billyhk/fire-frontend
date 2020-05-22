@@ -9,6 +9,7 @@ const StrainEdit = ({ match }) => {
 	const [error, setError] = useState(false);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		const url = `${APIURL}/strains/${match.params.id}`;
 		fetch(url)
 			.then((res) => res.json())

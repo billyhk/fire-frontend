@@ -1,7 +1,6 @@
 import React from 'react';
 
 const StrainForm = ({ strain, handleSubmit, handleChange }) => {
-	window.scrollTo(0, 0);
 	return (
 		<form className='strain-form' onSubmit={handleSubmit}>
 			<label htmlFor='name' className='form-title'>

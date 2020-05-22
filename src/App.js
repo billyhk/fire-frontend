@@ -17,7 +17,12 @@ import './comp-css/footerSignatures.css';
 import './comp-css/strainInformation.css';
 import { FaBars, FaPlus, FaHome } from 'react-icons/fa';
 
+function scrollUp() {
+	window.scrollTo(0, 0);
+}
+
 const App = () => {
+	window.scrollTo(0, 0);
 	const { isShowing, toggle } = useModal();
 
 	return (
@@ -41,7 +46,7 @@ const App = () => {
 						</Link>
 						<Link className='links' to='/create'>
 							<li>
-								<FaPlus alt='create strain' />
+								<FaPlus alt='create strain' onClick={scrollUp}/>
 							</li>
 						</Link>
 					</ul>
