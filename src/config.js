@@ -1,1 +1,1 @@
-export const APIURL = 'http://fireinternationalapp.herokuapp.com';
+export const APIURL = 'https://fireinternationalapp.herokuapp.com';
