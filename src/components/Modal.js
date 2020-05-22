@@ -13,10 +13,8 @@ const Modal = ({ isShowing, hide }) => {
 						tabIndex={-1}
 						role='dialog'>
 						<div className='modal'>
-							<div className='modal-information'>
-								<div className='modal-header'>
-									<p>Welcome to FIRE</p>
-								</div>
+							<div className='modal-content'>
+								<h1 className='modal-header'>| i r e</h1>
 								<p className='modal-text'>
 									Before we get started, we need to verify that you're 21+. If
 									so, please press confirm to continue.

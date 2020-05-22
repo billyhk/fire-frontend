@@ -15,24 +15,15 @@ import { FaBars, FaPlus, FaHome } from 'react-icons/fa';
 
 const App = () => {
 	const { isShowing, toggle } = useModal();
-	// const { useRef } = React;
-	// const hamburgerButtonRef = useRef();
 
 	return (
 		<>
-			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
+			<Modal isShowing={isShowing} hide={toggle} />
 			<header>
 				<nav>
 					<Link className='links' to='/'>
 						<h1>| i r e</h1>
 					</Link>
-					{/* <Link className='links' to='/'>
-						<img
-							className='nav-icon'
-							src='https://github.com/andresaugusto/FIRE-front/blob/master/src/images/icons/home.png'
-							alt='home.png'
-						/>
-					</Link> */}
 					<ul>
 						<Link className='links' to='/'>
 							<li>
@@ -52,22 +43,6 @@ const App = () => {
 					</ul>
 				</nav>
 			</header>
-			{/* <header className='app-header'>
-				<h1>f i r e</h1>
-				<div className='nav-button'>
-					<Link to='/'>
-						<h1>home</h1>
-					</Link>
-					<h1>{'\u00b7'}</h1>
-					<Link to='/strains'>
-						<h1>all strains</h1>
-					</Link>
-					<h1>{'\u00b7'}</h1>
-					<Link to='/create'>
-						<h1>add strain</h1>
-					</Link>
-				</div>
-			</header> */}
 			<main>
 				<Switch>
 					<Route exact path='/' component={Home} />
