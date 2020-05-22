@@ -22,7 +22,7 @@ const App = () => {
 
 	return (
 		<>
-			<Modal isShowing={isShowing} hide={toggle} />
+			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
 			<header>
 				<nav>
 					<Link className='links' to='/'>
