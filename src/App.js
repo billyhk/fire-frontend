@@ -22,7 +22,7 @@ const App = () => {
 
 	return (
 		<>
-			{/* <Modal isShowing={isShowing} hide={toggle} /> */}
+			<Modal isShowing={isShowing} hide={toggle} />
 			<header>
 				<nav>
 					<Link className='links' to='/'>
@@ -80,7 +80,6 @@ const App = () => {
 						</a>
 					</li>
 				</ul>
-				{/* <div className='sign-email'>andres.augusto@icloud.com</div> */}
 				<span className='sign-date'>
 					<small>
 						20<span className='sign-first-letter'>20</span>
@@ -92,57 +91,3 @@ const App = () => {
 };
 
 export default App;
-
-// {
-// 	/* <!--Navbar--> */
-// }
-// <nav class='navbar navbar-dark  indigo darken-2'>
-// 	{/* <!-- Navbar brand --> */}
-// 	<h1 class='navbar-brand'>f i r e</h1>
-
-// 	{/* <!-- Collapse button --> */}
-// 	<button
-// 		ref={hamburgerButtonRef}
-// 		class='navbar-toggler third-button'
-// 		type='button'
-// 		data-toggle='collapse'
-// 		data-target='#navbarSupportedContent22'
-// 		aria-controls='navbarSupportedContent22'
-// 		aria-expanded='false'
-// 		aria-label='Toggle navigation'>
-// 		<div class='animated-icon3'>
-// 			<span></span>
-// 			<span></span>
-// 			<span></span>
-// 		</div>
-// 	</button>
-
-// 	{/* <!-- Collapsible content --> */}
-// 	<div class='collapse navbar-collapse' id='navbarSupportedContent22'>
-// 		{/* <!-- Links --> */}
-// 		<ul class='navbar-nav mr-auto'>
-// 			<li class='nav-item active'>
-// 				<Link to='/'>
-// 					<h1 class='nav-link'>
-// 						home <span class='sr-only'>(current)</span>
-// 					</h1>
-// 				</Link>
-// 			</li>
-// 			<li class='nav-item'>
-// 				<Link to='/strains'>
-// 					<h1 class='nav-link'>strains</h1>
-// 				</Link>
-// 			</li>
-// 			<li class='nav-item'>
-// 				<Link to='/create'>
-// 					<h1 class='nav-link'>create strain</h1>
-// 				</Link>
-// 			</li>
-// 		</ul>
-// 		{/* <!-- Links --> */}
-// 	</div>
-// 	{/* <!-- Collapsible content --> */}
-// </nav>;
-// {
-// 	/* <!--/.Navbar--> */
-// }
