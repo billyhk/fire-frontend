@@ -95,7 +95,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 				id='effect'
 			/>
 
-			<label htmlFor='effect' className='form-title'>
+			<label htmlFor='description' className='form-title'>
 				Description
 			</label>
 			<input
@@ -103,6 +103,19 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 				placeholder='Description'
 				value={strain.info}
 				name='info'
+				onChange={handleChange}
+				required
+				id='info'
+			/>
+
+			<label htmlFor='image' className='form-title'>
+				Image
+			</label>
+			<input
+				className='form-input'
+				placeholder='Image'
+				value={strain.mainImage}
+				name='mainImage'
 				onChange={handleChange}
 				required
 				id='info'

@@ -12,6 +12,8 @@ const StrainCreate = () => {
 		cbdContent: '',
 		smellAndFlavor: '',
 		effect: '',
+		info: '',
+		mainImage: ''
 	};
 	const [strain, setStrain] = useState(initialStrainState);
 	const [createdId, setCreatedId] = useState(null);
@@ -38,7 +40,6 @@ const StrainCreate = () => {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
 				setCreatedId(data._id);
 			})
 			.catch(() => {
