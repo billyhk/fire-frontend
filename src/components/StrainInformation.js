@@ -43,11 +43,7 @@ const StrainInformation = ({ match }) => {
 		<div>
 			<h2 className='page-title'>{strain.name}</h2>
 			<div className='details-container'>
-				<img
-					src={strain.mainImage}
-					className='details-image'
-					alt=''
-				/>
+				<img src={strain.mainImage} className='details-image' alt='' />
 				<ul className='details-text'>
 					<li className='details-property'>Genetics :</li>
 					<li className='details-value'>{strain.genetics}</li>
@@ -74,6 +70,14 @@ const StrainInformation = ({ match }) => {
 				<button>Update Strain</button>
 			</Link>
 			<button onClick={onDeletedStrain}>Delete Strain</button>
+
+			<div className='additional-images'>
+				{strain.additionalImages.length === 0
+					? null
+					: strain.additionalImages.map((image, i) => (
+							<img key={i} alt={strain.name} src={image} />
+					  ))}
+			</div>
 		</div>
 	);
 };

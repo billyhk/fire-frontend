@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 describe('App Component', () => {
 	let component = shallow(<App />);
-
+	
 	it('Should contain a Modal child component', () => {
 		expect(component.find(Modal).length).toBe(1);
 	});
