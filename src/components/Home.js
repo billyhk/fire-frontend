@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { APIURL } from '../config.js';
 
-const Home = ({strains}) => {
+const Home = ({ strains, scrollUp }) => {
 	let doneLoading;
 	// const [strains, setStrains] = useState([]);
-	
-		const plantCategories = [
-			'Indica',
-			'Sativa',
-			'Hybrid: Indica Dominant',
-			'Hybrid: Sativa Dominant',
-			'Hybrid: 50/50',
-		];
 
+	const plantCategories = [
+		'Indica',
+		'Sativa',
+		'Hybrid: Indica Dominant',
+		'Hybrid: Sativa Dominant',
+		'Hybrid: 50/50',
+	];
 
 	// useEffect(() => {
 	// 	fetch(`${APIURL}/strains`)
@@ -28,7 +27,7 @@ const Home = ({strains}) => {
 	function shuffleArray(array) {
 		let i = array.length - 1;
 		for (; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i/2));
+			const j = Math.floor(Math.random() * (i / 2));
 			const temp = array[i];
 			array[i] = array[j];
 			array[j] = temp;
@@ -46,15 +45,15 @@ const Home = ({strains}) => {
 		doneLoading = true;
 	}
 
-function setPopularStrains(e) {
-	return e.popular === true;
-}
-function setPopularStrainsOff(e) {
-	return e.popular === false;
-}
+	function setPopularStrains(e) {
+		return e.popular === true;
+	}
+	function setPopularStrainsOff(e) {
+		return e.popular === false;
+	}
 
-const popularStrains = strains.filter(setPopularStrains)
-const randomArray = strains.filter(setPopularStrainsOff)
+	const popularStrains = strains.filter(setPopularStrains);
+	const randomArray = strains.filter(setPopularStrainsOff);
 
 	if (doneLoading) {
 		return (
@@ -72,12 +71,8 @@ const randomArray = strains.filter(setPopularStrainsOff)
 					<div id='overflow'>
 						{plantCategories.map((category) => (
 							<div key={category}>
-								<Link to={`/strains/category/${category}`}>
-									<img
-										alt={category}
-										className='overflow-image'
-										src=''
-									/>
+								<Link to={`/strains/category/${category}`} onClick={scrollUp}>
+									<img alt={category} className='overflow-image' src='' />
 								</Link>
 							</div>
 						))}

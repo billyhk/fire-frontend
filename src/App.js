@@ -79,7 +79,11 @@ const App = () => {
 			</header>
 			<main>
 				<Switch>
-					<Route exact path='/' render={() => <Home strains={strains} />} />
+					<Route
+						exact
+						path='/'
+						render={() => <Home strains={strains} scrollUp={scrollUp} />}
+					/>
 					<Route exact path='/create' component={Create} />
 					<Route exact path='/strains/:id/edit' component={Edit} />
 					<Route exact path='/strains/:id' component={StrainInformation} />
@@ -118,11 +122,6 @@ const App = () => {
 						exact
 						path='/strains/category/Hybrid: 50/50'
 						render={() => <Hybrid50List strains={strains} />}
-					/>
-					<Route
-						exact
-						path='/strains/category/Hybrid: 50/50'
-						component={Hybrid50List}
 					/>
 				</Switch>
 			</main>
