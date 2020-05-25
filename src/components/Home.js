@@ -7,11 +7,11 @@ const Home = ({ strains, scrollUp }) => {
 	// const [strains, setStrains] = useState([]);
 
 	const plantCategories = [
-		'Indica',
-		'Sativa',
-		'Hybrid: Indica Dominant',
-		'Hybrid: Sativa Dominant',
-		'Hybrid: 50/50',
+		{ plantCategory: 'Indica', image: '' },
+		{ plantCategory: 'Sativa', image: '' },
+		{ plantCategory: 'Hybrid: Indica Dominant', image: '' },
+		{ plantCategory: 'Hybrid: Sativa Dominant', image: '' },
+		{ plantCategory: 'Hybrid: 50/50', image: '' },
 	];
 
 	// useEffect(() => {
@@ -70,9 +70,9 @@ const Home = ({ strains, scrollUp }) => {
 					<h2 className='plain-text'>Strain Categories</h2>
 					<div id='overflow'>
 						{plantCategories.map((category) => (
-							<div key={category}>
-								<Link to={`/strains/category/${category}`} onClick={scrollUp}>
-									<img alt={category} className='overflow-image' src='' />
+							<div key={category.plantCategory}>
+								<Link to={`/strains/category/${category.plantCategory}`} onClick={scrollUp}>
+									<img alt={category} className='overflow-image' src={category.image} />
 								</Link>
 							</div>
 						))}
