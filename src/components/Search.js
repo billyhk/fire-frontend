@@ -1,44 +1,60 @@
-import React, { useState } from 'react';
-import SearchForm from './SearchForm';
+import React from 'react';
+import { useHistory, Link } from 'react-router-dom';
 
-const Search = () => {
-	let apiUrl = 'https://fireinternationalapp.herokuapp.com/strains/search/';
-	const [searchString, setSearchString] = useState('');
-	const [strains, setStrains] = useState([]);
+const Search = (props) => {
+	const { strains, searchString, setSearchString } = props;
 
-	function getSearchData(searchString) {
-		let newUrl = `${apiUrl}${searchString}`;
-
-		fetch(newUrl)
-			.then((response) => response.json())
-			.then((response) => {
-				setStrains(response);
-			})
-			.catch(console.error);
-	}
-
-	function handleChange(e) {
+	const handleChange = (e) => {
+		e.persist();
 		setSearchString(e.target.value);
-	}
+	};
 
-	function handleSubmit(e) {
-		e.preventDefault();
-		getSearchData(searchString);
-    }
-    console.log(searchString)
+	let filteredStrains = strains.filter((strains) => {
+		return (
+			strains.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1 ||
+				strains.plantCategory
+					.toLowerCase()
+					.indexOf(searchString.toLowerCase()) !== -1 ||
+				strains.parents.toLowerCase().indexOf(searchString.toLowerCase()) !==
+					-1,
+			strains.info.toLowerCase().indexOf(searchString.toLowerCase()) !== -1 ||
+				strains.smellAndFlavor
+					.toLowerCase()
+					.indexOf(searchString.toLowerCase()) !== -1 ||
+				strains.effect.toLowerCase().indexOf(searchString.toLowerCase()) !== -1
+		);
+	});
+
 	return (
-		<div>
-			<SearchForm
-				handleChange={handleChange}
-				handleSubmit={handleSubmit}
-				searchString={searchString}
-			/>
-			{!strains ? (
-				<p>Sorry, there are no strains that match your query.</p>
-			) : (
-				strains.map((item) => <h2>{item.name}</h2>)
-			)}
-		</div>
+		<>
+			<form>
+				<input
+					type='text'
+					className='form-input'
+					name='searchString'
+					required
+					placeholder='Search'
+					onChange={handleChange}
+					value={searchString}
+				/>
+			</form>
+			<div>
+				{filteredStrains === 0 ? (
+					<p className='plain-text'>
+						Sorry, there are no strains that match your query.
+					</p>
+				) : (
+					filteredStrains.map((strain) => (
+						<h2 className='plain-text' key={strain._id}>
+							<Link to={`/strains/${strain._id}`} className='list-strain-name'>
+								{' '}
+								{strain.name}
+							</Link>
+						</h2>
+					))
+				)}
+			</div>
+		</>
 	);
 };
 

@@ -35,6 +35,8 @@ const App = () => {
 	window.scrollTo(0, 0);
 	const { isShowing, toggle } = useModal();
 	const [strains, setStrains] = useState([]);
+	const [searchString, setSearchString] = useState('');
+
 	// const [error, setError] = useState(false);
 
 	useEffect(() => {
@@ -95,7 +97,13 @@ const App = () => {
 					<Route
 						exact
 						path='/search'
-						render={() => <Search strains={strains} />}
+						render={() => (
+							<Search
+								strains={strains}
+								searchString={searchString}
+								setSearchString={setSearchString}
+							/>
+						)}
 					/>
 					{/* category components */}
 					<Route
