@@ -1,6 +1,18 @@
 import React from 'react';
 
 const StrainForm = ({ strain, handleSubmit, handleChange }) => {
+	const plantCategories = [
+		'Indica',
+		'Sativa',
+		'Hybrid: Indica Dominant',
+		'Hybrid: Sativa Dominant',
+		'Hybrid: 50/50',
+	];
+
+	const plantCategoriesMapped = plantCategories.map((item) => {
+		return <option>{item}</option>;
+	});
+
 	return (
 		<form className='strain-form' onSubmit={handleSubmit}>
 			<label htmlFor='name' className='form-title'>
@@ -19,15 +31,16 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<label htmlFor='plantCategory' className='form-title'>
 				Plant Category
 			</label>
-			<input
+			<select
 				className='form-input'
 				placeholder='Indica | Sativa | Hybrid: Indica Dominant | Hybrid: Sativa Dominant | Hybrid: 50/50'
-				defaultValue={strain.plantCategory}
+				value={strain.plantCategory}
 				name='plantCategory'
 				onChange={handleChange}
 				required
-				id='plantCategory'
-			/>
+				id='plantCategory'>
+				{plantCategoriesMapped}
+			</select>
 
 			<label htmlFor='genetics' className='form-title'>
 				Genetics

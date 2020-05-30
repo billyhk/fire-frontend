@@ -19,6 +19,19 @@ ul {
 	padding-inline-start: 0;
 }
 
+#overflow {
+	overflow: auto;
+	display: flex;
+	height: 30vmin;
+}
+.overflow-image {
+	height: 30vmin;
+}
+
+.plain-text {
+color: white;
+}
+
 /* * */
 
 input {
@@ -58,7 +71,7 @@ input {
 	min-height: 10vmin;
 }
 
-.home-header {
+#home-header {
 	background-image: url(https://d3atagt0rnqk7k.cloudfront.net/wp-content/uploads/2017/06/26113312/white-widow.jpg);
 	background-position: 50% 25%;
 	background-size: 100%;
@@ -66,6 +79,7 @@ input {
 	width: 100%;
 	background-repeat: no-repeat;
 	color: white;
+	position: relative;
 }
 
 .home-header-logo {
