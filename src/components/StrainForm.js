@@ -34,7 +34,7 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<select
 				className='form-input'
 				placeholder='Indica | Sativa | Hybrid: Indica Dominant | Hybrid: Sativa Dominant | Hybrid: 50/50'
-				value={strain.plantCategory}
+				defaultValue={strain.plantCategory}
 				name='plantCategory'
 				onChange={handleChange}
 				required

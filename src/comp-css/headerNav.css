@@ -35,7 +35,7 @@ header nav {
 }
 
 .links {
-	color: grey;
+	color: white;
 	text-decoration: none;
 	padding: 3vmin;
 }
@@ -61,7 +61,6 @@ header nav {
 	}
 
 	.links {
-		color: white;
 		text-decoration: none;
 		padding: 0.5rem 2rem;
 	}
