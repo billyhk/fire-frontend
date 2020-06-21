@@ -36,8 +36,24 @@ const App = () => {
 	const { isShowing, toggle } = useModal();
 	const [strains, setStrains] = useState([]);
 	const [searchString, setSearchString] = useState('');
-
 	// const [error, setError] = useState(false);
+
+	//authorization/authentication
+	const [authToken, setAuthToken] = useState('');
+	const [login, setLogin] = useState(false);
+	const [signUp, setSignUp] = useState(false);
+
+	const handleLogin = () => {
+		setLogin(!login);
+	};
+
+	const handleSignUp = () => {
+		setSignUp(!signUp);
+	};
+
+	const handleSignOut = () => {
+		setAuthToken('');
+	};
 
 	useEffect(() => {
 		fetch(`${APIURL}/strains`)

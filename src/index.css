@@ -20,13 +20,22 @@ ul {
 }
 
 #overflow {
-	overflow: auto;
+	overflow-y: hidden;
+	/* overflow: auto; */
 	display: flex;
-	height: 30vmin;
+	height: 35vmin;
 }
 .overflow-image {
-	height: 30vmin;
+	height: 35vmin;
 }
+
+#overflow2 {
+	overflow-y: hidden;
+	/* overflow: auto; */
+	display: flex;
+	height: 45vmin;
+}
+
 
 .plain-text {
 color: white;
@@ -112,6 +121,20 @@ input {
 .home-header-text {
 	padding-top: 20%;
 	text-align: left;
+}
+
+.home-headings {
+	color: rgb(125, 240, 102);
+	margin-top: 8%;
+}
+
+.home-subheadings {
+	color: rgb(196, 223, 77);
+}
+
+.anchor-to-fix {
+	color: white;
+	text-decoration: none;
 }
 
 /* MEDIA QUERIES */

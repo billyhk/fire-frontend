@@ -7,22 +7,32 @@ const Home = ({ strains, scrollUp }) => {
 	// const [strains, setStrains] = useState([]);
 
 	const plantCategories = [
-		{ plantCategory: 'Indica', image: '' },
-		{ plantCategory: 'Sativa', image: '' },
-		{ plantCategory: 'Hybrid: Indica Dominant', image: '' },
-		{ plantCategory: 'Hybrid: Sativa Dominant', image: '' },
-		{ plantCategory: 'Hybrid: 50/50', image: '' },
+		{
+			plantCategory: 'Indica',
+			image:
+				'https://www.royalqueenseeds.com/modules/prestablog/themes/royalqueenseeds/up-img/112.jpg',
+		},
+		{
+			plantCategory: 'Sativa',
+			image:
+				'https://darkheartnursery.com/wp-content/uploads/2016/01/jc_sunset_sherbet.jpg',
+		},
+		{
+			plantCategory: 'Hybrid: Indica Dominant',
+			image:
+				'https://www.pacificgreengrowers.com/wp-content/uploads/2018/06/CarlSaganA-300x300.jpg',
+		},
+		{
+			plantCategory: 'Hybrid: Sativa Dominant',
+			image:
+				'https://ssl.c.photoshelter.com/img-get/I0000RqMU3_RHTg4/s/1200/I0000RqMU3_RHTg4.jpg',
+		},
+		{
+			plantCategory: 'Hybrid: 50/50',
+			image:
+				'https://images.squarespace-cdn.com/content/v1/5a80dbc9e45a7c1f4ef344d5/1550582244386-T4QNENSKYPASTZRMWUXL/ke17ZwdGBToddI8pDm48kPJXHKy2-mnvrsdpGQjlhod7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmihaE5rlzFBImxTetd_yW5btdZx37rH5fuWDtePBPDaHF5LxdCVHkNEqSYPsUQCdT/01-16_IG_Purple_C.jpg',
+		},
 	];
-
-	// useEffect(() => {
-	// 	fetch(`${APIURL}/strains`)
-	// 		.then((res) => res.json())
-	// 		.then((data) => {
-	// 			setStrains(data);
-	// 		})
-	// 		.catch(console.error);
-	// 	// eslint-disable-next-line
-	// }, []);
 
 	function shuffleArray(array) {
 		let i = array.length - 1;
@@ -67,18 +77,25 @@ const Home = ({ strains, scrollUp }) => {
 					</div>
 				</header>
 				<main>
-					<h2 className='plain-text'>Strain Categories</h2>
-					<div id='overflow'>
+					<h2 className='home-headings'>Strain Categories</h2>
+					<div id='overflow2'>
 						{plantCategories.map((category) => (
 							<div key={category.plantCategory}>
-								<Link to={`/strains/category/${category.plantCategory}`} onClick={scrollUp}><h2 className='plain-text'>{category.plantCategory}</h2>
-									{/* <img alt={category.plantCategory} className='overflow-image' src={category.image} /> */}
+								<Link
+									to={`/strains/category/${category.plantCategory}`}
+									onClick={scrollUp}>
+									<h2 className='home-subheadings'>{category.plantCategory}</h2>
+									<img
+										alt={category.plantCategory}
+										className='overflow-image'
+										src={category.image}
+									/>
 								</Link>
 							</div>
 						))}
 					</div>
 
-					<h2 className='plain-text'>Popular Strains</h2>
+					<h2 className='home-headings'>Popular Strains</h2>
 					<div id='overflow'>
 						{popularStrains.map((strain) => (
 							<div key={strain._id}>
@@ -93,7 +110,7 @@ const Home = ({ strains, scrollUp }) => {
 						))}
 					</div>
 
-					<h2 className='plain-text'>Explore Random</h2>
+					<h2 className='home-headings'>Explore Random</h2>
 					<div id='overflow'>
 						{randomArray.map((strain) => (
 							<div key={strain._id}>

@@ -31,16 +31,18 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 			<label htmlFor='plantCategory' className='form-title'>
 				Plant Category
 			</label>
+			<br></br>
 			<select
 				className='form-input'
-				placeholder='Indica | Sativa | Hybrid: Indica Dominant | Hybrid: Sativa Dominant | Hybrid: 50/50'
-				value={strain.plantCategory}
+				// placeholder='Indica | Sativa | Hybrid: Indica Dominant | Hybrid: Sativa Dominant | Hybrid: 50/50'
+				defaultValue={strain.plantCategory}
 				name='plantCategory'
 				onChange={handleChange}
 				required
 				id='plantCategory'>
 				{plantCategoriesMapped}
 			</select>
+			<br></br>
 
 			<label htmlFor='genetics' className='form-title'>
 				Genetics

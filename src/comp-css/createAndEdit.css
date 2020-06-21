@@ -55,6 +55,12 @@
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#plantCategory {
+	width: 100%;
+	min-height: 2rem;
+	padding: 1vmin;
+}
+
 ::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: white;

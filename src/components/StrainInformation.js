@@ -21,12 +21,18 @@ const StrainInformation = ({ match }) => {
 	}, []);
 
 	const onDeletedStrain = (e) => {
-		const url = `${APIURL}/strains/${match.params.id}`;
-		fetch(url, { method: 'DELETE' })
-			.then((res) => {
-				setDeleted(true);
-			})
-			.catch(console.error);
+		let confirm = prompt(
+			"This action will delete the strain user. Please type 'confirm' to delete",
+			''
+		);
+		if (confirm === 'confirm') {
+			const url = `${APIURL}/strains/${match.params.id}`;
+			fetch(url, { method: 'DELETE' })
+				.then((res) => {
+					setDeleted(true);
+				})
+				.catch(console.error);
+		}
 	};
 
 	if (deleted) {
@@ -68,9 +74,11 @@ const StrainInformation = ({ match }) => {
 					<li className='details-value'>{strain.info}</li>
 				</ul>
 			</div>
-			<Link className='anchor-to-fix' to={`/strains/${match.params.id}/edit`}>
-				<button className='details-update-button'>Update Strain</button>
-			</Link>
+			<button className='details-update-button'>
+				<Link className='anchor-to-fix' to={`/strains/${match.params.id}/edit`}>
+					Update Strain
+				</Link>
+			</button>
 			<button className='details-delete-button' onClick={onDeletedStrain}>
 				Delete Strain
 			</button>
