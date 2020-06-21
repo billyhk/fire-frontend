@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-	<Router basename='/FIRE-front'>
+	<Router basename='/'>
 		<App />
 	</Router>,
 	document.getElementById('root')
