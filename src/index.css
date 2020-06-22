@@ -36,9 +36,8 @@ ul {
 	height: 45vmin;
 }
 
-
 .plain-text {
-color: white;
+	color: white;
 }
 
 /* * */
@@ -126,10 +125,13 @@ input {
 .home-headings {
 	color: rgb(125, 240, 102);
 	margin-top: 8%;
+	border-bottom: 2px solid rgba(0, 128, 0, 0.651);
+	letter-spacing: 0.5vmin;
 }
 
 .home-subheadings {
 	color: rgb(196, 223, 77);
+	letter-spacing: 0.5vmin;
 }
 
 .anchor-to-fix {
