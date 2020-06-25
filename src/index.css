@@ -25,6 +25,13 @@ ul {
 	display: flex;
 	height: 35vmin;
 }
+
+#overflow > * {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .overflow-image {
 	height: 35vmin;
 }
@@ -145,7 +152,7 @@ input {
 }
 
 button:hover {
-	transition: .5s;
+	transition: 0.5s;
 	background: rgba(66, 66, 66, 0.199);
 }
 
@@ -157,6 +164,22 @@ button:hover {
 		display: block;
 		text-align: center;
 		margin: 0 auto;
+	}
+	#overflow2 {
+		font-size: 0.8rem;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	#overflow2 > * {
+		margin: 3vmin;
+		padding: 4vmin;
+		min-width: 15vw;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#overflow2 img {
+		display: none;
 	}
 	.app-header > h1 {
 		margin: 0;
