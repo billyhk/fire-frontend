@@ -139,6 +139,16 @@ input {
 	text-decoration: none;
 }
 
+#cancel-button {
+	margin-top: 0;
+	color: rgb(43, 202, 51);
+}
+
+button:hover {
+	transition: .5s;
+	background: rgba(66, 66, 66, 0.199);
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 700px) {

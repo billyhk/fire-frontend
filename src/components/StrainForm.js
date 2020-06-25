@@ -1,6 +1,8 @@
 import React from 'react';
+import { createHashHistory } from 'history';
 
 const StrainForm = ({ strain, handleSubmit, handleChange }) => {
+	const history = createHashHistory();
 	const plantCategories = [
 		'Indica',
 		'Sativa',
@@ -148,8 +150,11 @@ const StrainForm = ({ strain, handleSubmit, handleChange }) => {
 				id='info'
 			/>
 
-			<button className='submit-button' type='submit'>
+			<button className='submit-button'  type='submit'>
 				Submit
+			</button>
+			<button className='submit-button' id='cancel-button' onClick={history.goBack}>
+				Cancel and Go Back
 			</button>
 		</form>
 	);
