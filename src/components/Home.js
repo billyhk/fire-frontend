@@ -81,11 +81,11 @@ const Home = ({ strains, scrollUp }) => {
 					<div id='overflow2'>
 						{plantCategories.map((category) => (
 							<div key={category.plantCategory}>
-								<h2 className='home-subheadings'>
-										{category.plantCategory}</h2>
 								<Link
 									to={`/strains/category/${category.plantCategory}`}
 									onClick={scrollUp}>
+								<h2 className='home-subheadings'>
+										{category.plantCategory}</h2>
 									<img
 										alt={category.plantCategory}
 										className='overflow-image'
